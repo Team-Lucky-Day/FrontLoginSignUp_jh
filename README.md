@@ -1,5 +1,6 @@
 <h1>Terminal</h1>
-npm install
+### `npm install`
+### `npm start`
 
 # Getting Started with Create React App
 
