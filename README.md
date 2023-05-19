@@ -17,9 +17,9 @@ $npm -v<br/>
  ┣ 📂Header<br/>
  ┃ ┣ 📜Header.jsx<br/>
  ┃ ┗ 📜header.module.css<br/>
- ┣ 📂Login_SignUp<br/>
- ┃ ┣ 📂Login<br/>
- ┃ ┃ ┣ 📂KakaoLogin<br/>
+ ┣ 📂Login_SignUp -> (로그인/회원가입 전체폴더)<br/>
+ ┃ ┣ 📂Login<br/> -> (로그인 폴더)
+ ┃ ┃ ┣ 📂KakaoLogin ->  (로그인/회원가입_소셜로그인)<br/>
  ┃ ┃ ┃ ┗ 📜SocialLogin.jsx<br/>
  ┃ ┃ ┣ 📜FindPw.jsx<br/>
  ┃ ┃ ┣ 📜FindPwInput.jsx<br/>
