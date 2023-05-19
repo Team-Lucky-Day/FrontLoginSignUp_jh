@@ -1,4 +1,6 @@
-<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/css modules-000000?style=for-the-badge&logo=cssmodules&logoColor=white"/>
+
+
 <h1>First</h1>
 Node.js설치 : https://nodejs.org/en/ (LTS버전 추천)<br/>
 $node -v<br/>
