@@ -10,33 +10,33 @@ $npm -v<br/>
 ### `npm install react-router-dom`
 
 <h1>File-tree</h1>
-📦src
- ┣ 📂Header
- ┃ ┣ 📜Header.jsx
- ┃ ┗ 📜header.module.css
- ┣ 📂Login_SignUp
- ┃ ┣ 📂Login
- ┃ ┃ ┣ 📂KakaoLogin
- ┃ ┃ ┃ ┗ 📜SocialLogin.jsx
- ┃ ┃ ┣ 📜FindPw.jsx
- ┃ ┃ ┣ 📜FindPwInput.jsx
- ┃ ┃ ┣ 📜ForgotYourPw.jsx
- ┃ ┃ ┗ 📜Login.jsx
- ┃ ┣ 📂SignUp
- ┃ ┃ ┣ 📜SignUp.jsx
- ┃ ┃ ┗ 📜SignUpInput.jsx
- ┃ ┣ 📜AuthPage.jsx
- ┃ ┣ 📜Container.jsx
- ┃ ┗ 📜container.module.css
- ┣ 📂Main
- ┃ ┣ 📜Main.jsx
- ┃ ┣ 📜MainContainer.jsx
- ┃ ┣ 📜mainheader.module.css
- ┃ ┗ 📜MainHeaderBtn.jsx
- ┣ 📜App.css
- ┣ 📜App.js
- ┣ 📜App.test.js
- ┣ 📜index.css
- ┣ 📜index.js
- ┣ 📜reportWebVitals.js
- ┗ 📜setupTests.js
+📦src<br/>
+ ┣ 📂Header<br/>
+ ┃ ┣ 📜Header.jsx<br/>
+ ┃ ┗ 📜header.module.css<br/>
+ ┣ 📂Login_SignUp<br/>
+ ┃ ┣ 📂Login<br/>
+ ┃ ┃ ┣ 📂KakaoLogin<br/>
+ ┃ ┃ ┃ ┗ 📜SocialLogin.jsx<br/>
+ ┃ ┃ ┣ 📜FindPw.jsx<br/>
+ ┃ ┃ ┣ 📜FindPwInput.jsx<br/>
+ ┃ ┃ ┣ 📜ForgotYourPw.jsx<br/>
+ ┃ ┃ ┗ 📜Login.jsx<br/>
+ ┃ ┣ 📂SignUp<br/>
+ ┃ ┃ ┣ 📜SignUp.jsx<br/>
+ ┃ ┃ ┗ 📜SignUpInput.jsx<br/>
+ ┃ ┣ 📜AuthPage.jsx<br/>
+ ┃ ┣ 📜Container.jsx<br/>
+ ┃ ┗ 📜container.module.css<br/>
+ ┣ 📂Main<br/>
+ ┃ ┣ 📜Main.jsx<br/>
+ ┃ ┣ 📜MainContainer.jsx<br/>
+ ┃ ┣ 📜mainheader.module.css<br/>
+ ┃ ┗ 📜MainHeaderBtn.jsx<br/>
+ ┣ 📜App.css<br/>
+ ┣ 📜App.js<br/>
+ ┣ 📜App.test.js<br/>
+ ┣ 📜index.css<br/>
+ ┣ 📜index.js<br/>
+ ┣ 📜reportWebVitals.js<br/>
+ ┗ 📜setupTests.js<br/>
