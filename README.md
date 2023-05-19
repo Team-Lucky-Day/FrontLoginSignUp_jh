@@ -14,10 +14,10 @@ $npm -v<br/>
 
 <h1>File-tree</h1>
 📦src<br/>
- ┣ 📂Header<br/>
+ **┣ 📂Header**<br/>
  ┃ ┣ 📜Header.jsx<br/>
  ┃ ┗ 📜header.module.css<br/>
- ┣ 📂Login_SignUp -> (로그인/회원가입 전체폴더)<br/>
+ **┣ 📂Login_SignUp -> (로그인/회원가입 전체폴더)**<br/>
  ┃ ┣ 📂Login-> (로그인 폴더)<br/> 
  ┃ ┃ ┣ 📂KakaoLogin ->  (로그인/회원가입_소셜로그인)<br/>
  ┃ ┃ ┃ ┗ 📜SocialLogin.jsx<br/>
@@ -25,19 +25,19 @@ $npm -v<br/>
  ┃ ┃ ┣ 📜FindPwInput.jsx<br/>
  ┃ ┃ ┣ 📜ForgotYourPw.jsx<br/>
  ┃ ┃ ┗ 📜Login.jsx<br/>
- ┃ ┣ 📂SignUp<br/>
+ ┃ ┣ 📂SignUp -> (회원가입 폴더)<br/>
  ┃ ┃ ┣ 📜SignUp.jsx<br/>
  ┃ ┃ ┗ 📜SignUpInput.jsx<br/>
  ┃ ┣ 📜AuthPage.jsx<br/>
  ┃ ┣ 📜Container.jsx<br/>
  ┃ ┗ 📜container.module.css<br/>
- ┣ 📂Main<br/>
+ **┣ 📂Main -> (메인화면 폴더)**<br/>
  ┃ ┣ 📜Main.jsx<br/>
  ┃ ┣ 📜MainContainer.jsx<br/>
  ┃ ┣ 📜mainheader.module.css<br/>
  ┃ ┗ 📜MainHeaderBtn.jsx<br/>
  ┣ 📜App.css<br/>
- ┣ 📜App.js<br/>
+┣ 📜App.js -> react가 구동되는 최종 js파일<br/>
  ┣ 📜App.test.js<br/>
  ┣ 📜index.css<br/>
  ┣ 📜index.js<br/>
