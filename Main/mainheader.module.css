@@ -1,6 +1,7 @@
 :root {
   --blue: #dba39a;
   --lightblue: #fff5e4;
+  --gray: #333;
 }
 body {
   background: #f5ebe0;
@@ -9,27 +10,37 @@ body {
   background-repeat: no-repeat;
 }
 .header {
+  background: url("/public/img/img2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 720px;
+  position: relative;
+  /* border-radius: 0 0 100px 100px; */
+}
+.headerGroup {
   width: 100%;
-  font-weight: bold;
-  height: 100px;
   text-align: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 2% 0;
 }
 .Luckyday {
+  height: 100px;
   font-size: 1.8rem;
   margin-left: 10%;
-  letter-spacing: 3px;
+  letter-spacing: 0.3rem;
+  animation: main-logo 1.2s ease-in-out forwards;
+  color: white; /* 텍스트 색상 설정 */
+  font-weight: bold;
 }
 .link {
-  color: var(--gray);
+  color: white;
   font-size: 0.9rem;
   margin: 1.5rem 10rem;
   text-decoration: none;
 }
 .link:hover {
-  color: var(--gray);
+  color: white;
   font-size: 0.9rem;
   margin: 1.5rem 10rem;
   text-decoration: none;
@@ -65,11 +76,7 @@ body {
   font-size: var(--font-size);
   font-weight: bold;
   letter-spacing: 0.1rem;
-  background-image: linear-gradient(
-    90deg,
-    var(--blue) 0%,
-    var(--lightblue) 74%
-  );
+  background-color: var(--lightblue);
   color: var(--text);
   box-shadow: var(--shadow);
   transform: translateY(var(--y)) translateZ(0);
@@ -148,12 +155,137 @@ html {
 *:after {
   box-sizing: inherit;
 }
+/************************************************/
+/*main화면 문구*/
+.luckydayInfoTextGroup {
+  width: 60%;
+  margin: 0 auto;
+  animation: main-logo 1.2s ease-in-out forwards;
+}
+.luckydayInfoText {
+  display: block;
+  font-size: 5rem;
+  letter-spacing: 0.7rem;
+  font-weight: 900;
+  margin: 3% 0;
+}
+.luckydayInfoText_1 {
+  font-family: "GmarketSansMedium";
+  display: block;
+  margin-left: 2%;
+  font-size: 1.5rem;
+  letter-spacing: 0.5rem;
+  font-weight: 900;
+}
+.luckydayInfoText_2 {
+  font-family: "GmarketSansMedium";
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  font-weight: 900;
+  margin: 1% 2%;
+}
+/*******************************************************/
+.scrolldown {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  z-index: 100;
+  text-align: center;
+  transform: translateX(-50%);
+}
+.scrolldown span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+.box_scroll {
+  position: relative;
+  margin: 10px auto 0;
+  width: 60px;
+  height: 60px;
+  /* background-color: #f5ebe0; */
+  border-radius: 500px;
+}
+.iconScroll {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 23px;
+  height: 34px;
+  border: 3px solid #ffe8d2;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+}
+.iconScroll:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 5px;
+  height: 7px;
+  background: #ffe8d2;
+  margin-left: -2.5px;
+  top: 5px;
+  border-radius: 50px;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: scroll;
+  animation-name: scroll;
+}
+@keyframes scroll {
+  0% {
+  }
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(14px);
+  }
+}
 /*******************************************************/
 /*container*/
 .container {
-  background-color: #ffddc2;
-  width: 98%;
-  height: 613px;
-  margin: 0 auto;
-  border-radius: 20px 20px 0 0;
+  justify-content: space-between;
+  display: flex;
+}
+.container img {
+  margin: 3%;
+  min-height: 400px; /* 최소한의 높이 설정 */
+  border-radius: 20px;
+  float: left;
+  animation: slide-up 1.2s ease-in-out forwards;
+}
+.containerBoxText {
+  display: block;
+  letter-spacing: 0.7rem;
+  font-weight: 900;
+  margin-left: 5%;
+}
+/*******************************************************/
+
+/*******************************************************/
+/*애니메이션*/
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes main-logo {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

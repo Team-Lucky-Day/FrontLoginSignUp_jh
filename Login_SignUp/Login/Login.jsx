@@ -12,7 +12,7 @@ const Login = (props) => {
       }
     >
       <form action="#" className={containerStyle.form} id="form2" method="post">
-        <h2 className={containerStyle["form__title"]}>Login</h2>
+        <h2 className={containerStyle["form__title"]}>ㅤㅤㅤㅤㅤ</h2>
         <input
           type="text"
           placeholder="Username"
@@ -24,8 +24,11 @@ const Login = (props) => {
           className={containerStyle.input}
         />
         <ForgotYourPw />
-        <SocialLogin />
         <button className={containerStyle.btn}>Login</button>
+        <div className={containerStyle.divider}>
+          <span>or</span>
+        </div>
+        <SocialLogin />
       </form>
     </div>
   );
