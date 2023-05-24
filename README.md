@@ -14,6 +14,11 @@ $npm -v<br/>
 
 <h1>File-tree</h1>
 📦src<br/>
+ ┣ 📂Footer
+ ┃ ┣ 📜Footer.jsx
+ ┃ ┣ 📜footer.module.css
+ ┃ ┣ 📜FooterContent.jsx
+ ┃ ┗ 📜FooterContentGoLink.jsx
  ┣ 📂Header<br/>
  ┃ ┣ 📜Header.jsx<br/>
  ┃ ┗ 📜header.module.css<br/>
@@ -32,10 +37,11 @@ $npm -v<br/>
  ┃ ┣ 📜Container.jsx<br/>
  ┃ ┗ 📜container.module.css<br/>
  ┣ 📂Main -> (메인화면 폴더)<br/>
- ┃ ┣ 📜Main.jsx<br/>
- ┃ ┣ 📜MainContainer.jsx<br/>
- ┃ ┣ 📜mainheader.module.css<br/>
- ┃ ┗ 📜MainHeaderBtn.jsx<br/>
+ ┃ ┣ 📜LuckydayInfoText.jsx
+ ┃ ┣ 📜Main.jsx
+ ┃ ┣ 📜MainContainer.jsx
+ ┃ ┣ 📜mainheader.module.css
+ ┃ ┗ 📜MainHeaderBtn.jsx
  ┣ 📜App.css<br/>
  ┣ 📜App.js -> react가 구동되는 최종 js파일<br/>
  ┣ 📜App.test.js<br/>
