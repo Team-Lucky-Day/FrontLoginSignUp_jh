@@ -190,9 +190,6 @@ body {
 .btn:focus {
   outline: none;
 }
-.btn:hover {
-  opacity: 0.7;
-}
 
 .form {
   background-color: var(--white);
