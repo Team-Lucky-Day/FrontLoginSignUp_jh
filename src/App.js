@@ -1,12 +1,15 @@
 import "./App.css";
-import Header from "./Header/Header";
-import Container from "./Login_SignUp/Container";
+import Main from "./Main/Main";
+import { Routes, Route } from "react-router-dom";
+import AuthPage from "./Login_SignUp/AuthPage";
+import FindPw from "./Login_SignUp/Login/FindPw";
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Container />
-    </div>
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/Login" element={<AuthPage />} />
+      <Route path="/FindPw" element={<FindPw />} />
+    </Routes>
   );
 }
 

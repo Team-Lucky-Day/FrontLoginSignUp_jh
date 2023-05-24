@@ -3,10 +3,10 @@ import containerStyle from "../container.module.css";
 const SignUpInput = (props) => {
   return (
     <input
-        type="text"
-        placeholder={props.placeholder}
-        className={containerStyle.input}
-      />
+      type="text"
+      placeholder={props.placeholder}
+      className={containerStyle.input}
+    />
   );
 };
 

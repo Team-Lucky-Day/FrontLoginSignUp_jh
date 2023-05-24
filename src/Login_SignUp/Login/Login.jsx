@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import containerStyle from "../container.module.css";
+import ForgotYourPw from "./ForgotYourPw";
+import SocialLogin from "./KakaoLogin/SocialLogin";
 const Login = (props) => {
   return (
     <div
@@ -10,7 +12,7 @@ const Login = (props) => {
       }
     >
       <form action="#" className={containerStyle.form} id="form2" method="post">
-        <h2 className={containerStyle["form__title"]}>Login</h2>
+        <h2 className={containerStyle["form__title"]}>ㅤㅤㅤㅤㅤ</h2>
         <input
           type="text"
           placeholder="Username"
@@ -21,10 +23,12 @@ const Login = (props) => {
           placeholder="Password"
           className={containerStyle.input}
         />
-        <a href="#" className={containerStyle.link} method="post">
-          Forgot your password?
-        </a>
+        <ForgotYourPw />
         <button className={containerStyle.btn}>Login</button>
+        <div className={containerStyle.divider}>
+          <span>or</span>
+        </div>
+        <SocialLogin />
       </form>
     </div>
   );
