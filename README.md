@@ -1,55 +1,70 @@
-<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black"/>&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>&nbsp;&nbsp;&nbsp;<img src="https://img.shields.io/badge/css modules-000000?style=for-the-badge&logo=cssmodules&logoColor=white"/>
+# Getting Started with Create React App
 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<h1>Terminal(React is the first)</h1>
-Node.js설치 : https://nodejs.org/en/ (LTS버전 추천)<br/>
-$node -v<br/>
-$npm -v<br/>
+## Available Scripts
 
-<h1>Terminal</h1>
-node_modules파일 커밋을 안했기 때문에 파일 새로 받을 시 항상 npm install 해줘야 함! <br/><br/>
+In the project directory, you can run:
 
-### `npm install`
 ### `npm start`
-### `npm install react-router-dom`
-### `npm install aos --save`
 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-<h1>File-tree</h1>
-📦src<br/>
- ┣ 📂Footer<br/>
- ┃ ┣ 📜Footer.jsx<br/>
- ┃ ┣ 📜footer.module.css<br/>
- ┃ ┣ 📜FooterContent.jsx<br/>
- ┃ ┗ 📜FooterContentGoLink.jsx<br/>
- ┣ 📂Header<br/>
- ┃ ┣ 📜Header.jsx<br/>
- ┃ ┗ 📜header.module.css<br/>
- ┣ 📂Login_SignUp -> (로그인/회원가입 전체폴더)<br/>
- ┃ ┣ 📂Login-> (로그인 폴더)<br/> 
- ┃ ┃ ┣ 📂KakaoLogin ->  (로그인/회원가입_소셜로그인)<br/>
- ┃ ┃ ┃ ┗ 📜SocialLogin.jsx<br/>
- ┃ ┃ ┣ 📜FindPw.jsx<br/>
- ┃ ┃ ┣ 📜FindPwInput.jsx<br/>
- ┃ ┃ ┣ 📜ForgotYourPw.jsx<br/>
- ┃ ┃ ┗ 📜Login.jsx<br/>
- ┃ ┣ 📂SignUp -> (회원가입 폴더)<br/>
- ┃ ┃ ┣ 📜SignUp.jsx<br/>
- ┃ ┃ ┗ 📜SignUpInput.jsx<br/>
- ┃ ┣ 📜AuthPage.jsx<br/>
- ┃ ┣ 📜Container.jsx<br/>
- ┃ ┗ 📜container.module.css<br/>
- ┣ 📂Main -> (메인화면 폴더)<br/>
- ┃ ┣ 📜LuckydayInfoText.jsx<br/>
- ┃ ┣ 📜Main.jsx<br/>
- ┃ ┣ 📜MainContainer.jsx<br/>
- ┃ ┣ 📜mainheader.module.css<br/>
- ┃ ┗ 📜MainHeaderBtn.jsx<br/>
- ┣ 📜App.css<br/>
- ┣ 📜App.js -> react가 구동되는 최종 js파일<br/>
- ┣ 📜App.test.js<br/>
- ┣ 📜index.css<br/>
- ┣ 📜index.js<br/>
- ┣ 📜reportWebVitals.js<br/>
- ┗ 📜setupTests.js<br/>
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

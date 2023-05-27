@@ -27,7 +27,7 @@ const SignUp = (props) => {
         containerStyle["container--signup"]
       }
     >
-      <form action="#" className={containerStyle.form} id="form1" method="post">
+      <div className={containerStyle.form} id="form1" method="post">
         <h2 className={containerStyle["form__title"]}>Sign Up</h2>
         <SignUpInput placeholder=" Username" />
         <SignUpInput placeholder=" Id (Email) " />
@@ -37,7 +37,7 @@ const SignUp = (props) => {
         <input type="checkbox" className={containerStyle.checkbox} />
 
         <button className={containerStyle.btn}>Sign Up</button>
-      </form>
+      </div>
     </div>
   );
 };

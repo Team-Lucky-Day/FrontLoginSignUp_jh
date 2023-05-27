@@ -11,7 +11,7 @@ const Login = (props) => {
         containerStyle["container--signin"]
       }
     >
-      <form action="#" className={containerStyle.form} id="form2" method="post">
+      <div className={containerStyle.form} id="form2" method="post">
         <h2 className={containerStyle["form__title"]}>ㅤㅤㅤㅤㅤ</h2>
         <input
           type="text"
@@ -29,7 +29,7 @@ const Login = (props) => {
           <span>or</span>
         </div>
         <SocialLogin />
-      </form>
+      </div>
     </div>
   );
 };
