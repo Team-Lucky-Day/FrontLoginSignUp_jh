@@ -1,31 +1,17 @@
 import React, { useState } from "react";
-import containerStyle from "../container.module.css";
+import "../../CSS/container.css";
 import ForgotYourPw from "./ForgotYourPw";
 import SocialLogin from "./KakaoLogin/SocialLogin";
 const Login = (props) => {
   return (
-    <div
-      className={
-        containerStyle.container__form +
-        " " +
-        containerStyle["container--signin"]
-      }
-    >
-      <div className={containerStyle.form} id="form2" method="post">
-        <h2 className={containerStyle["form__title"]}>ㅤㅤㅤㅤㅤ</h2>
-        <input
-          type="text"
-          placeholder="Username"
-          className={containerStyle.input}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className={containerStyle.input}
-        />
+    <div className="container__form container--signin">
+      <div className="form" id="form2">
+        <h2 className="form__title">ㅤㅤㅤㅤㅤ</h2>
+        <input type="text" placeholder="Username" className="input" />
+        <input type="password" placeholder="Password" className="input" />
         <ForgotYourPw />
-        <button className={containerStyle.btn}>Login</button>
-        <div className={containerStyle.divider}>
+        <button className="btn">Login</button>
+        <div className="divider">
           <span>or</span>
         </div>
         <SocialLogin />

@@ -1,13 +1,13 @@
 import React from "react";
-import footerStyle from "./footer.module.css";
+import "../CSS/footer.css";
 import FooterContentGoLink from "./FooterContentGoLink";
 const FooterContent = (props) => {
   return (
     <>
       <footer>
-        <div className={footerStyle.footer}>
+        <div className="footer">
           <h3>Connect</h3>
-          <ul className={footerStyle.socials}>
+          <ul className="socials">
             <li>
               <a href="#">
                 <i className="fa fa-facebook"></i>
@@ -34,17 +34,17 @@ const FooterContent = (props) => {
               </a>
             </li>
           </ul>
-          <div className={footerStyle["footer-copyright"]}>
+          <div className="footer-copyright">
             <p>Copyright &copy;2023 LD all rights reserved. </p>
           </div>
         </div>
       </footer>
-      <div className={footerStyle.column + " " + footerStyle.link}>
+      <div className="column link">
         <h3>Links</h3>
         <FooterContentGoLink link="Team" />
         <FooterContentGoLink link="Menu" />
         <FooterContentGoLink link="Seat" />
-        <FooterContentGoLink link="QnA" />
+        <FooterContentGoLink link="Favorites Menu" />
       </div>
     </>
   );

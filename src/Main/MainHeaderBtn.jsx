@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import mainstyle from "./mainheader.module.css";
+import "../CSS/mainheader.css";
 
 const MainHeaderBtn = ({ text }) => {
   const handleButtonClick = () => {
@@ -18,11 +18,8 @@ const MainHeaderBtn = ({ text }) => {
 
   return (
     <>
-      <Link to="/Login" className={mainstyle.link}>
-        <div
-          className={`${mainstyle.button} ${mainstyle.fast} ${mainstyle.white}`}
-          onClick={handleButtonClick}
-        >
+      <Link to="/Login" className="link">
+        <div className="button fast white" onClick={handleButtonClick}>
           <div>{slicedText}</div>
         </div>
       </Link>

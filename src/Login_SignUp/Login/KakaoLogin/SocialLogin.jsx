@@ -1,5 +1,5 @@
 import React from "react";
-import socialLoginStyle from "./SocialLogin.module.css";
+import "../../../CSS/SocialLogin.css";
 const Rest_api_key = "381590a49ad13906a4df97ebbc42d353"; //REST API KEY
 const redirect_uri = "http://localhost:3000/auth"; //Redirect URI
 // oauth 요청 URL
@@ -13,9 +13,9 @@ const SocialLogin = (props) => {
   return (
     <div>
       <>
-        <div className={socialLoginStyle.social_login}>
-          <button className={socialLoginStyle.kakao}>
-            <div className={socialLoginStyle.kakaoLogo}>
+        <div className="social_login">
+          <button className="kakao">
+            <div className="kakaoLogo">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -64,7 +64,7 @@ const SocialLogin = (props) => {
             </div>
             Start with Kakao
           </button>
-          <button className={socialLoginStyle.github}>Start with Github</button>
+          <button className="github">Start with Github</button>
           <div className="clearfix"></div>
         </div>
       </>

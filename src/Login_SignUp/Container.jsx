@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Login from "./Login/Login";
-import containerStyle from "./container.module.css";
+import "../CSS/container.css";
 import SignUp from "./SignUp/SignUp";
 
 const Container = (props) => {
@@ -13,26 +13,18 @@ const Container = (props) => {
     setContainerActive(true);
   };
   return (
-    <div
-      className={`${containerStyle.container} ${
-        containerActive ? containerStyle["right-panel-active"] : ""
-      }`}
-    >
+    <div className={`container ${containerActive ? "right-panel-active" : ""}`}>
       <Login />
       <SignUp />
-      <div className={containerStyle.container__overlay}>
-        <div className={containerStyle.overlay}>
-          <div
-            className={`${containerStyle.overlay__panel} ${containerStyle["overlay--left"]}`}
-          >
-            <button className={containerStyle.btn} onClick={handleSignInClick}>
+      <div className="container__overlay">
+        <div className="overlay">
+          <div className="overlay__panel overlay--left">
+            <button className="btn" onClick={handleSignInClick}>
               Login
             </button>
           </div>
-          <div
-            className={`${containerStyle.overlay__panel} ${containerStyle["overlay--right"]}`}
-          >
-            <button className={containerStyle.btn} onClick={handleSignUpClick}>
+          <div className="overlay__panel overlay--right">
+            <button className="btn" onClick={handleSignUpClick}>
               Sign Up
             </button>
           </div>

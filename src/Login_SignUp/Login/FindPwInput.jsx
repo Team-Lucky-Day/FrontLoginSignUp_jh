@@ -1,13 +1,9 @@
 import React from "react";
-import containerStyle from "../container.module.css";
+import "../../CSS/container.css";
 const FindPwInput = (props) => {
   return (
     <div>
-      <input
-        type="text"
-        placeholder={props.placeholder}
-        className={containerStyle.input}
-      />
+      <input type="text" placeholder={props.placeholder} className="input" />
     </div>
   );
 };

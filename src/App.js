@@ -9,6 +9,9 @@ function App() {
       <Route path="/" element={<Main />} />
       <Route path="/Login" element={<AuthPage />} />
       <Route path="/FindPw" element={<FindPw />} />
+      {/* <Route path="/Menu" element={<Menu />} />
+      <Route path="/Seat" element={<Seat />} />
+      <Route path="/FavoritesMenu" element={<FavoritesMenu />} /> */}
     </Routes>
   );
 }

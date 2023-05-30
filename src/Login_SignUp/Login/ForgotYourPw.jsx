@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import containerStyle from "../container.module.css";
+import "../../CSS/container.css";
 const ForgotYourPw = (props) => {
   const openNewWindow = () => {
     window.open(
@@ -11,10 +11,7 @@ const ForgotYourPw = (props) => {
   };
   return (
     <>
-      <p
-        onClick={openNewWindow}
-        className={containerStyle.link + " " + containerStyle["forgotlink"]}
-      >
+      <p onClick={openNewWindow} className="forgotpwlink forgotlink">
         Forgot your password?
       </p>
     </>
