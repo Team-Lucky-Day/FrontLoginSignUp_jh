@@ -16,6 +16,7 @@ const Card = () => {
       ),
       cardimage: "main_img1.jpg",
       cardLink: "Menu 바로가기",
+      gotocardlink: "/Menu",
     },
     card2: {
       cardtextheader: "Seat",
@@ -29,17 +30,21 @@ const Card = () => {
       ),
       cardimage: "main_img2.jpg",
       cardLink: "Seat 바로가기",
+      gotocardlink: "/Seat",
     },
     card3: {
       cardtextheader: "Favorites Menu",
       cardtextbody: (
         <>
-          자주 선택하는 메뉴들을 <br />한눈에 관리하고, 더욱 편리하게 <br />주문할 수 있는
-          즐겨찾기 메뉴를 <br />만나보세요.
+          자주 선택하는 메뉴들을 <br />
+          한눈에 관리하고, 더욱 편리하게 <br />
+          주문할 수 있는 즐겨찾기 메뉴를 <br />
+          만나보세요.
         </>
       ),
       cardimage: "main_img3.jpg",
       cardLink: "Favorites Menu 바로가기",
+      gotocardlink: "/FavoritesMenu",
     },
   };
   return (

@@ -6,6 +6,7 @@ const MainContainer = ({
   cardtextbody,
   cardimage,
   cardLink,
+  gotocardlink
 }) => {
   return (
     <>
@@ -14,7 +15,9 @@ const MainContainer = ({
         <div className="cardText">
           <h1>{cardtextheader}</h1>
           <p>{cardtextbody}</p>
-          <button>{cardLink}</button>
+          <a href={gotocardlink}>
+            <button>{cardLink}</button>
+          </a>
         </div>
       </div>
     </>
