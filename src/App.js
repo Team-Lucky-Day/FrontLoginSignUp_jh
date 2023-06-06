@@ -12,7 +12,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="/Menu" element={<Menu />} />
-      <Route path="/Admin" element={<AppAdmin />} />
+      {/* <Route path="/Admin" element={<AppAdmin />} /> */}
       <Route path="/Login" element={<AuthPage />} />
 
       <Route path="/Seat" />
