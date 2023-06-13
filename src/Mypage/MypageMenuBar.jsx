@@ -3,7 +3,6 @@ import MypageMenuBarContainer from "./MypageMenuBarContainer";
 import SignUpInput from "../Login_SignUp/SignUp/SignUpInput";
 import MyMenuChart from "./MyMenuChart";
 import { useNavigate } from "react-router-dom";
-import { Line } from "@nivo/line";
 import Swal from "sweetalert2";
 
 import styles from "../CSS/MypageMenuBar.module.css";

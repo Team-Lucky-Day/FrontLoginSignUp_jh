@@ -4,15 +4,15 @@ import ReactApexChart from "react-apexcharts";
 const MyMenuChart = () => {
   const [series] = useState([
     {
-      name: "Americano",
+      name: "Coffee",
       data: [28, 29, 33, 36, 32, 32, 33],
     },
     {
-      name: "Earl Grey Tea",
+      name: "Beverage",
       data: [12, 11, 14, 18, 17, 13, 13],
     },
     {
-      name: "Salt Caramel Financier",
+      name: "Desert",
       data: [20, 22, 27, 38, 37, 25, 37],
     },
   ]);

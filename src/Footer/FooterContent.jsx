@@ -41,10 +41,10 @@ const FooterContent = (props) => {
       </footer>
       <div className="column link">
         <h3>Links</h3>
-        <FooterContentGoLink link="Team" />
-        <FooterContentGoLink link="Menu" />
-        <FooterContentGoLink link="Seat" />
-        <FooterContentGoLink link="Favorites Menu" />
+        <FooterContentGoLink link="Team" href="/Team" />
+        <FooterContentGoLink link="Menu" href="/Menu" />
+        <FooterContentGoLink link="Seat" href="/Seat" />
+        <FooterContentGoLink link="Favorites Menu" href="/FavoritesMenu" />
       </div>
     </>
   );
