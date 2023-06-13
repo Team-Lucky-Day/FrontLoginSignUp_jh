@@ -327,10 +327,15 @@ html {
     opacity: 1;
   }
 }
-
+.main-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 13%;
+  padding-left: 2rem;
+}
 .main-menu-button {
   z-index: 4;
-  display: grid;
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 7%;
@@ -367,10 +372,11 @@ body.open .menuGroup {
 }
 .menuGroup {
   z-index: 3;
+  width: 13%;
   position: absolute;
-  margin-right: 3%;
   align-items: center;
   transition: 0.05s;
+  padding-left: 2.5rem;
   top: 17%;
   right: 0;
 }
@@ -380,7 +386,6 @@ body.open .menuGroup {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 100px;
 }
 .menuGroup .menulink {
   position: relative;
@@ -429,5 +434,12 @@ body.open .menuGroup .menulink {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+/*****************************************/
+/*미디어쿼리*/
+@media (max-width: 1290px) {
+  .main-menu-container {
+    display: none;
   }
 }

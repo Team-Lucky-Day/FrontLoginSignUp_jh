@@ -1,0 +1,9 @@
+.mypage-body {
+  display: flex;
+  justify-content: space-between;
+  height: 587px;
+  margin-top: 1.5rem;
+}
+.apexcharts-title-text {
+  font-size: 1.1rem;
+}

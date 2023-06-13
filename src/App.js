@@ -6,6 +6,7 @@ import FindPw from "./Login_SignUp/Login/FindPw";
 import AppAdmin from "./Admin/App";
 import Menu from "./Menu/App";
 import FavoritesMenu from "./Favorites_Menu/FavoritesMenu";
+import Mypage from "./Mypage/Mypage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/FavoritesMenu" element={<FavoritesMenu />} />
       <Route path="/FindPw" element={<FindPw />} />
       <Route path="/Menu" element={<Menu />} />
+      <Route path="/Mypage" element={<Mypage />} />
       {/* <Route path="/Seat" element={<Seat />} /> */}
     </Routes>
   );
