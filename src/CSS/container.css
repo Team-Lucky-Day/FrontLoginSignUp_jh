@@ -200,7 +200,10 @@ body {
   height: 100%;
   text-align: center;
 }
-
+.idContainer {
+  display: flex;
+  align-items: center;
+}
 .input {
   background-color: #fff;
   border: none;
@@ -209,6 +212,29 @@ body {
   width: 100%;
   border-radius: 10px;
   font-size: 0.881rem;
+}
+.id {
+  background-color: #fff;
+  border: none;
+  padding: 0.9rem 0.9rem;
+  margin: 0.5rem 0;
+  width: 95%;
+  border-radius: 10px;
+  font-size: 0.881rem;
+}
+.idButton {
+  width: 65%;
+  height: 50px;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 0.6rem;
+  background-color: #ffd9b0;
+  font-weight: bold;
+  border: none;
+}
+.idButton:hover {
+  cursor: pointer;
 }
 .checkbox {
   display: none;

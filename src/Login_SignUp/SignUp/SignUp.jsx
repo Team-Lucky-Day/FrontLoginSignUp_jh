@@ -6,6 +6,7 @@ import SignUpInput from "./SignUpInput";
 import Swal from "sweetalert2";
 
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = (props) => {
   const inputPlaceholder = [
@@ -24,6 +25,8 @@ const SignUp = (props) => {
   const [showCardInputs, setShowCardInputs] = useState(false);
   const [scrollAnimation, setScrollAnimation] = useState(false);
 
+  const [overlap, setOverlap] = useState(false);
+
   const handleInputChange = (index, value) => {
     const newInputs = [...inputs];
     newInputs[index] = value;
@@ -34,7 +37,17 @@ const SignUp = (props) => {
     setShowCardInputs(e.target.checked);
     setScrollAnimation(e.target.checked);
   };
-
+  const navigate = useNavigate();
+  const idoverlapCheck = (e) => {
+    Swal.fire({
+      icon: "error",
+      title: "",
+      text: "이미 존재하는 아이디입니다.",
+      customClass: {
+        confirmButton: "btn-color",
+      },
+    });
+  };
   const handleButtonClick = () => {
     const passwordCheck = (e) => {
       if (inputs[2] !== inputPlaceholder[5]) {
@@ -42,8 +55,9 @@ const SignUp = (props) => {
       } else {
       }
     };
+
     axios({
-      url: "http://localhost:8080/user/SignUp",
+      url: "http://localhost:8080/user/signup",
       method: "post",
       data: {
         u_name: inputs[0],
@@ -54,21 +68,40 @@ const SignUp = (props) => {
       },
       baseURL: "http://localhost:3000/Login",
     })
-      .then(function a(response) {
-        console.log(response);
+      .then(function (response) {
+        if (response.status === 200) {
+          // 성공적인 응답 (200 OK)
+          console.log(axios.data);
+          Swal.fire({
+            icon: "success",
+            title: "",
+            text: "회원가입되셨습니다.",
+            customClass: {
+              confirmButton: "btn-color",
+            },
+          });
+          console.log("요청이 성공했습니다!");
+          navigate("/Login");
+        } else if (response.status === 400) {
+          // 기타 상태 코드 처리
+          if (response && response.status === 400) {
+            idoverlapCheck();
+          } else {
+            Swal.fire({
+              icon: "success",
+              title: "",
+              text: "사용가능 한 아이디입니다.",
+              customClass: {
+                confirmButton: "btn-color",
+              },
+            });
+          }
+          console.log("요청이 실패했습니다. 상태 코드:", response.status);
+        }
       })
       .catch(function (error) {
         console.log(error);
       });
-    console.log(axios.data);
-    Swal.fire({
-      icon: "success",
-      title: "",
-      text: "회원가입되셨습니다.",
-      customClass: {
-        confirmButton: "btn-color",
-      },
-    });
   };
 
   return (
@@ -81,6 +114,24 @@ const SignUp = (props) => {
         <h2 className="form__title">Sign Up</h2>
         <div className="scrollBar">
           {inputs.slice(0, 6).map((value, index) => {
+            if (index === 1) {
+              return (
+                <React.Fragment key={index}>
+                  <div className="idContainer">
+                    <SignUpInput
+                      type="password" // 패스워드 입력 타입
+                      className="id"
+                      value={inputs[index]}
+                      placeholder={inputPlaceholder[index]}
+                      onChange={(e) => handleInputChange(index, e.target.value)}
+                    />
+                    <button className="idButton" onClick={idoverlapCheck}>
+                      아이디 중복 체크
+                    </button>
+                  </div>
+                </React.Fragment>
+              );
+            }
             if (index === 2 || index === 3) {
               // Password 관련 input일 경우
               return (
@@ -132,13 +183,6 @@ const SignUp = (props) => {
               <SignUpInput
                 type="text"
                 className="input"
-                value={inputs[5]}
-                placeholder={inputPlaceholder[5]}
-                onChange={(e) => handleInputChange(5, e.target.value)}
-              />
-              <SignUpInput
-                type="password"
-                className="input"
                 value={inputs[6]}
                 placeholder={inputPlaceholder[6]}
                 onChange={(e) => handleInputChange(6, e.target.value)}
@@ -156,6 +200,13 @@ const SignUp = (props) => {
                 value={inputs[8]}
                 placeholder={inputPlaceholder[8]}
                 onChange={(e) => handleInputChange(8, e.target.value)}
+              />
+              <SignUpInput
+                type="text"
+                className="input"
+                value={inputs[9]}
+                placeholder={inputPlaceholder[9]}
+                onChange={(e) => handleInputChange(9, e.target.value)}
               />
             </div>
           )}

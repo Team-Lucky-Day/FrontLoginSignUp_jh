@@ -36,6 +36,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Ubuntu";
 }
 .link {
   color: white;
@@ -174,6 +175,7 @@ html {
   letter-spacing: 0.7rem;
   font-weight: 900;
   margin: 3% 0;
+  font-family: "Ubuntu";
 }
 .luckydayInfoText_1 {
   font-family: "GmarketSansMedium";
@@ -204,6 +206,7 @@ html {
   font-size: 14px;
   font-weight: 500;
   color: #fff;
+  font-family: "Ubuntu";
 }
 .box_scroll {
   position: relative;
@@ -219,7 +222,7 @@ html {
   left: 50%;
   width: 23px;
   height: 34px;
-  border: 3px solid #ffe8d2;
+  border: 3px solid #ffffff;
   border-radius: 50px;
   transform: translate(-50%, -50%);
 }
@@ -229,7 +232,7 @@ html {
   left: 50%;
   width: 5px;
   height: 7px;
-  background: #ffe8d2;
+  background: hsl(0, 0%, 100%);
   margin-left: -2.5px;
   top: 5px;
   border-radius: 50px;
@@ -386,6 +389,9 @@ body.open .menuGroup {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+.menuGroup nav a {
+  font-family: "Ubuntu";
 }
 .menuGroup .menulink {
   position: relative;

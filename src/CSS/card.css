@@ -99,6 +99,7 @@
   font-size: 15px;
   margin-top: 1rem;
   line-height: 150%;
+  font-family: "Ubuntu";
 }
 .card .cardText button {
   padding: 0.6rem;

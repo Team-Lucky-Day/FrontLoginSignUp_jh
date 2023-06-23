@@ -2,6 +2,7 @@ import React from "react";
 import MypageMenuBarContainer from "./MypageMenuBarContainer";
 import SignUpInput from "../Login_SignUp/SignUp/SignUpInput";
 import MyMenuChart from "./MyMenuChart";
+import MyMenuElectronicReceipt from "./MypageElectronicReceipt";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -352,6 +353,30 @@ const MypageMenuBar = () => {
       navigate("/");
     }, 1000);
   };
+  const withdrawalOption = {
+    option1: [
+      {
+        value: "",
+        name: "선택해주세요.",
+      },
+      {
+        value: "op1",
+        name: "너무 많이 이용해요",
+      },
+      {
+        value: "op2",
+        name: "더 이용 하고 싶은 서비스가 없어요",
+      },
+      {
+        value: "op3",
+        name: "새 계정을 만들고 싶어요",
+      },
+      {
+        value: "op4",
+        name: "기타",
+      },
+    ],
+  };
   return (
     <>
       <div className={styles.mypageMenuBar}>
@@ -406,7 +431,7 @@ const MypageMenuBar = () => {
         <div className={styles.mypageMenuBarpersonal}>
           <h3>전자 영수증</h3>
           <div className={styles.mypageMenuBarContainerMain}>
-            <div></div>
+            <MyMenuElectronicReceipt />
           </div>
         </div>
       )}
@@ -430,6 +455,29 @@ const MypageMenuBar = () => {
         <div className={styles.mypageMenuBarpersonal}>
           <h3>회원 탈퇴</h3>
           <div className={styles.mypageMenuBarContainerMain}>
+            <h4 className={styles.withdrawalCheck}>LD 탈퇴 전 확인하세요</h4>
+            <div
+              style={{
+                textAlign: "center",
+                fontSize: "14px",
+                fontFamily: "GmarketSansMedium",
+              }}
+            >
+              탈퇴하시면 이용 중인 모든 서비스 정보가 삭제됩니다.
+              <br />
+              <br />
+              계정을 삭제하시려는 이유를 말씀해주세요. 제품 개선에 중요자료로
+              활용하겠습니다.
+              <br />
+              <br />
+            </div>
+            <select className={styles.select}>
+              {withdrawalOption.option1.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.name}
+                </option>
+              ))}
+            </select>
             <div className={styles.mypageMenuBarWithdrawal}>
               {inputs.slice(0, 2).map((value, index) => {
                 return (

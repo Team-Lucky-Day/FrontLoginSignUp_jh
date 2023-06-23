@@ -66,6 +66,7 @@ footer {
   word-spacing: 2px;
   align-items: center;
   justify-content: center;
+  font-family: "Ubuntu";
 }
 /****************************************************************/
 .column {
@@ -103,6 +104,7 @@ h3 {
 .ul .li a {
   color: #a7a7a7;
   text-decoration: none;
+  font-family: "Ubuntu";
 }
 .ul .li a:hover {
   color: #c7940a;

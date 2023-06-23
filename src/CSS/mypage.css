@@ -7,3 +7,148 @@
 .apexcharts-title-text {
   font-size: 1.1rem;
 }
+.receiptMain {
+  height: 370px;
+}
+.receiptHeader {
+  font-size: 0.8rem;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+.receiptBody {
+}
+.receiptTable {
+  width: 1000px;
+}
+.receiptTable-thead {
+  align-items: center;
+  justify-content: space-around;
+  letter-spacing: 0.3rem;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.receiptTable-thead td {
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  padding: 0.5rem 0;
+  font-weight: bold;
+  text-align: center;
+}
+.receiptTable-tbody-tr {
+  align-items: center;
+  justify-content: space-around;
+  letter-spacing: 0.3rem;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.receiptTable-tbody-tr td {
+  border-bottom: 1px solid gray;
+  font-weight: 500;
+  padding: 1.3rem 1rem;
+}
+.receiptTable-td-1 {
+  text-align: left;
+  width: 1%;
+  text-align: center;
+}
+.receiptTable-td-2 {
+  width: 10%;
+  text-align: center;
+}
+.receiptTable-td-3 {
+  width: 10%;
+  text-align: center;
+}
+.receiptTable-td-3 button {
+  position: relative;
+  border: none;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.25s;
+  font-size: 0.7rem;
+  background-color: rgb(255, 244, 243);
+  color: #3c3c3c;
+}
+.receiptTable-td-3 button:hover {
+  color: #3c3c3c;
+  background: rgb(240, 216, 213);
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.receiptdetail-wrap {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 400px;
+  height: 500px;
+  position: relative;
+  top: 1.8rem;
+  padding: 2rem;
+}
+.receiptdetail-head {
+  padding-left: 10px;
+  display: inline;
+  text-shadow: 1px 1px 2px gray;
+  width: 100%;
+}
+.receiptdetail-head-logo {
+  font-weight: bold;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 1.8rem;
+  padding-bottom: 2rem;
+}
+.receiptdetail-head-detail {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed rgb(153, 153, 153);
+}
+.receiptdetail-body-header-detail-name {
+  font-weight: bold;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  border-bottom: 2px dashed rgb(153, 153, 153);
+}
+.close-area {
+  display: inline;
+  float: right;
+  padding-right: 10px;
+  cursor: pointer;
+  text-shadow: 1px 1px 2px gray;
+  color: white;
+}
+.content {
+  margin-top: 20px;
+  padding: 0px 10px;
+  text-shadow: 1px 1px 2px gray;
+  color: white;
+}

@@ -32,7 +32,7 @@
   font-weight: 600;
   margin: 0;
   margin-bottom: 1rem;
-  background-color: #b7a99a;
+  background-color: #c5b9ad;
 }
 .mypageMenuBarContainerMain,
 .mypageMenuBarMyMenu {
@@ -40,11 +40,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #b7a99a;
+  background-color: #c5b9ad;
   border-radius: 2rem 2rem 0 0;
   width: 1150px;
-  height: 510px;
+  height: 505px;
   padding: 1rem 0;
+  font-family: "Ubuntu";
 }
 .mypageMenuBarContainerMain .div,
 .mypageMenuBarMyMenu > div {
@@ -52,6 +53,7 @@
 }
 h3 {
   color: rgb(62, 45, 27);
+  font-family: "GmarketSansMedium";
 }
 .personalInfoImg {
   background-color: white;
@@ -61,6 +63,9 @@ h3 {
   border-radius: 50%;
   padding: 1.5rem 1.2rem;
   margin: 2rem auto;
+}
+.mypageMenuBarContainer {
+  font-family: "GmarketSansMedium";
 }
 .mypageMenuBarContainerMainInput {
   overflow-y: scroll;
@@ -90,4 +95,24 @@ h3 {
   letter-spacing: 0.4rem;
   border: 0px;
   border-radius: 10px;
+  font-family: "GmarketSansMedium";
+}
+.withdrawalCheck {
+  text-decoration: underline;
+}
+
+.mypageMenuBarContainerMain select {
+  width: 14rem;
+  height: 1.8rem;
+  margin: 0.5rem 0 2rem 0;
+  border: 2px solid #dededb;
+  border-radius: 7px;
+}
+
+.mypageMenuBarContainerMain select:hover {
+  cursor: pointer;
+}
+.mypageMenuBarpersonal h3,
+.mypageMenuBarContainerMain {
+  font-family: "GmarketSansMedium";
 }
