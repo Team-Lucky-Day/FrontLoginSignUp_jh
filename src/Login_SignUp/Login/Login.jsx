@@ -70,14 +70,12 @@ const Login = (props) => {
           type="text"
           placeholder={inputPlaceholder[0]}
           className="input"
-          value={inputs[0]}
           onChange={(e) => handleInputChange(e.target.value)}
         />
         <input
           type="password"
           placeholder={inputPlaceholder[1]}
           className="input"
-          value={inputs[1]}
           onChange={(e) => handleInputChange(e.target.value)}
         />
         <ForgotYourPw />
