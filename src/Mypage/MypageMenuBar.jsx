@@ -3,6 +3,7 @@ import MypageMenuBarContainer from "./MypageMenuBarContainer";
 import SignUpInput from "../Login_SignUp/SignUp/SignUpInput";
 import MyMenuChart from "./MyMenuChart";
 import MyMenuElectronicReceipt from "./MypageElectronicReceipt";
+import MypageCustomerCenter from "./MypageCustomerCenter";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -447,7 +448,7 @@ const MypageMenuBar = () => {
         <div className={styles.mypageMenuBarpersonal}>
           <h3>고객 센터</h3>
           <div className={styles.mypageMenuBarContainerMain}>
-            <div></div>
+            <MypageCustomerCenter />
           </div>
         </div>
       )}
@@ -491,7 +492,7 @@ const MypageMenuBar = () => {
                   </React.Fragment>
                 );
               })}
-              <button onClick={handleButtonClick}>회원탈퇴</button>
+              <button className="mypageMenuBarWithdrawalButton" onClick={handleButtonClick}>회원탈퇴</button>
             </div>
           </div>
         </div>
