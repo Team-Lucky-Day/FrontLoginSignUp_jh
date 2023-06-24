@@ -3,8 +3,8 @@ import "../CSS/footer.css";
 const FooterContentGoLink = ({ link, href }) => {
   return (
     <>
-      <ul className="ul">
-        <li className="li">
+      <ul className="footer-ul">
+        <li className="footer-li">
           <a href={href}>{link}</a>
         </li>
       </ul>

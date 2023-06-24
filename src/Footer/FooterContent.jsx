@@ -5,9 +5,9 @@ const FooterContent = (props) => {
   return (
     <>
       <footer>
-        <div className="footer">
+        <div className="footer-main">
           <h3>Connect</h3>
-          <ul className="socials">
+          <ul className="footer-socials">
             <li>
               <a href="#">
                 <i className="fa fa-facebook"></i>
@@ -39,7 +39,7 @@ const FooterContent = (props) => {
           </div>
         </div>
       </footer>
-      <div className="column link">
+      <div className="footer-column footer-link">
         <h3>Links</h3>
         <FooterContentGoLink link="Team" href="/Team" />
         <FooterContentGoLink link="Menu" href="/Menu" />

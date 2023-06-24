@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Swal from "sweetalert2";
 const MypageCustomerCenter = () => {
   const [textareaValue, setTextareaValue] = useState("");
 
@@ -9,6 +10,16 @@ const MypageCustomerCenter = () => {
     if (byteLength <= 2500) {
       setTextareaValue(inputValue);
     }
+  };
+  const handleButtonClick = () => {
+    Swal.fire({
+      icon: "success",
+      title: "",
+      text: "의견을 남겨주셔서 감사합니다.",
+      customClass: {
+        confirmButton: "btn-color",
+      },
+    });
   };
   return (
     <>
@@ -47,7 +58,7 @@ const MypageCustomerCenter = () => {
               </td>
             </tr>
             <tr>
-              <td>휴대폰</td>
+              <td>휴대폰 번호</td>
               <td>
                 <input
                   type="text"
@@ -75,7 +86,7 @@ const MypageCustomerCenter = () => {
             </tr>
           </table>
           <div className="receiptMypageCustomerCenterMain-Body-submit">
-            <button>등록하기</button>
+            <button onClick={handleButtonClick}>등록하기</button>
           </div>
         </div>
       </div>

@@ -48,8 +48,8 @@ const Card = () => {
     },
   };
   return (
-    <div className="cardcomponent">
-      <div className="wrapper">
+    <div className="main-cardcomponent">
+      <div className="main-wrapper">
         <CardComponent {...cardComponentText.card1} cardclass="card1" />
         <CardComponent {...cardComponentText.card2} cardclass="card2" />
         <CardComponent {...cardComponentText.card3} cardclass="card3" />
