@@ -1,6 +1,5 @@
 import React from "react";
 
-import styles from "../CSS/MypageMenuBar.module.css";
 const MypageMenuBarContainer = ({ menuName, onClick }) => {
   const handleClick = () => {
     onClick();
@@ -9,8 +8,8 @@ const MypageMenuBarContainer = ({ menuName, onClick }) => {
   return (
     <>
       <div
-        className={styles.mypageMenuBarContainer}
-        style={{ borderBottom: "2px solid gray", paddingBottom: "5px" }}
+        className="mypageMenuBarContainer"
+        style={{ borderBottom: "2px solid gray" }}
         onClick={handleClick}
       >
         {menuName}

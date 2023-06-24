@@ -7,7 +7,6 @@ import MypageCustomerCenter from "./MypageCustomerCenter";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
-import styles from "../CSS/MypageMenuBar.module.css";
 const MypageMenuBar = () => {
   const data = [
     {
@@ -302,7 +301,7 @@ const MypageMenuBar = () => {
   const navigate = useNavigate();
   const handleClick = (menu) => {
     switch (menu) {
-      case "개인정보 수정":
+      case "회원정보 수정":
         setPersonalInfo(true);
         setElectronicReceipt(false);
         setMyMenu(false);
@@ -380,10 +379,10 @@ const MypageMenuBar = () => {
   };
   return (
     <>
-      <div className={styles.mypageMenuBar}>
+      <div className="mypageMenuBar">
         <MypageMenuBarContainer
-          menuName="개인정보 수정"
-          onClick={() => handleClick("개인정보 수정")}
+          menuName="회원정보 수정"
+          onClick={() => handleClick("회원정보 수정")}
         />
         <MypageMenuBarContainer
           menuName="전자영수증"
@@ -403,20 +402,23 @@ const MypageMenuBar = () => {
         />
       </div>
       {personalInfo && (
-        <div className={styles.mypageMenuBarpersonal}>
-          <h3>개인정보 수정</h3>
-          <div className={styles.mypageMenuBarContainerMain}>
+        <div className="mypageMenuBarpersonal">
+          <h3>회원정보 수정</h3>
+          <div
+            className="mypageMenuBarContainerMain
+        "
+          >
             <div>
-              <div className={styles.personalInfoImg}>
+              <div className="personalInfoImg">
                 <img src="/img/mypageuser.png" width={70} height={70} />
               </div>
-              <div className={styles.mypageMenuBarContainerMainInput}>
+              <div className="mypageMenuBarContainerMainInput">
                 {inputs.slice(0, 9).map((value, index) => {
                   return (
                     <React.Fragment key={index}>
                       <SignUpInput
                         type="password" // 패스워드 입력 타입
-                        className="input"
+                        className="mypage-input"
                         value={inputs[index]}
                         placeholder={inputPlaceholder[index]}
                       />
@@ -424,39 +426,42 @@ const MypageMenuBar = () => {
                   );
                 })}
               </div>
+              <button className="mypage-personalInfo-button">
+                회원정보 수정
+              </button>
             </div>
           </div>
         </div>
       )}
       {electronicReceipt && (
-        <div className={styles.mypageMenuBarpersonal}>
+        <div className="mypageMenuBarpersonal">
           <h3>전자 영수증</h3>
-          <div className={styles.mypageMenuBarContainerMain}>
+          <div className="mypageMenuBarContainerMain">
             <MyMenuElectronicReceipt />
           </div>
         </div>
       )}
       {myMenu && (
-        <div className={styles.mypageMenuBarpersonal}>
+        <div className="mypageMenuBarpersonal">
           <h3>나의 메뉴</h3>
-          <div className={styles.mypageMenuBarMyMenu}>
+          <div className="mypageMenuBarMyMenu">
             <MyMenuChart />
           </div>
         </div>
       )}
       {customerCenter && (
-        <div className={styles.mypageMenuBarpersonal}>
+        <div className="mypageMenuBarpersonal">
           <h3>고객 센터</h3>
-          <div className={styles.mypageMenuBarContainerMain}>
+          <div className="mypageMenuBarContainerMain">
             <MypageCustomerCenter />
           </div>
         </div>
       )}
       {memberWithdrawal && (
-        <div className={styles.mypageMenuBarpersonal}>
+        <div className="mypageMenuBarpersonal">
           <h3>회원 탈퇴</h3>
-          <div className={styles.mypageMenuBarContainerMain}>
-            <h4 className={styles.withdrawalCheck}>LD 탈퇴 전 확인하세요</h4>
+          <div className="mypageMenuBarContainerMain">
+            <h4 className="withdrawalCheck">LD 탈퇴 전 확인하세요</h4>
             <div
               style={{
                 textAlign: "center",
@@ -472,14 +477,14 @@ const MypageMenuBar = () => {
               <br />
               <br />
             </div>
-            <select className={styles.select}>
+            <select className="select">
               {withdrawalOption.option1.map((option) => (
                 <option key={option.value} value={option.value}>
                   {option.name}
                 </option>
               ))}
             </select>
-            <div className={styles.mypageMenuBarWithdrawal}>
+            <div className="mypageMenuBarWithdrawal">
               {inputs.slice(0, 2).map((value, index) => {
                 return (
                   <React.Fragment key={index}>
@@ -492,7 +497,12 @@ const MypageMenuBar = () => {
                   </React.Fragment>
                 );
               })}
-              <button className="mypageMenuBarWithdrawalButton" onClick={handleButtonClick}>회원탈퇴</button>
+              <button
+                className="mypageMenuBarWithdrawalButton"
+                onClick={handleButtonClick}
+              >
+                회원탈퇴
+              </button>
             </div>
           </div>
         </div>
