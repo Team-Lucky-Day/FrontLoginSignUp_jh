@@ -3,7 +3,7 @@
   border-radius: 0 3rem 0 0;
   padding: 2rem;
   width: 250px;
-  height: 501px;
+  height: 508px;
 }
 .mypageMenuBarContainer {
   margin: 2rem 1rem;
@@ -44,7 +44,7 @@
   background-color: #c5b9ad;
   border-radius: 2rem 2rem 0 0;
   width: 1150px;
-  height: 453px;
+  height: 459px;
   padding: 1rem 0;
   font-family: "Ubuntu";
 }
@@ -58,14 +58,15 @@ h3 {
 }
 .personalInfoImg {
   background-color: white;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   text-align: center;
   border-radius: 50%;
   padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 1rem;
   margin-left: 20%;
 }
 .mypageMenuBarContainer {
@@ -75,7 +76,7 @@ h3 {
   overflow-y: scroll;
   padding: 10px;
   height: 200px;
-  padding: 1rem;
+  padding: 0 1rem;
   width: 200px;
 }
 .mypage-input {
@@ -151,6 +152,7 @@ h3 {
 .mypage-body {
   display: flex;
   justify-content: space-between;
+  margin: 2.2rem auto;
 }
 .apexcharts-title-text {
   font-size: 1.1rem;
@@ -233,8 +235,8 @@ h3 {
   cursor: pointer;
 }
 .modal-overlay {
-  width: 100%;
-  height: 100%;
+  width: 99.9%;
+  height: 99.8%;
   position: absolute;
   left: 0;
   top: 0;
@@ -246,7 +248,6 @@ h3 {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 .receiptdetail-wrap {
