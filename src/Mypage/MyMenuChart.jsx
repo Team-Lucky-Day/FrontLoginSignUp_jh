@@ -78,6 +78,7 @@ const MyMenuChart = () => {
 
   return (
     <div id="chart">
+      {/* <div>이 곳에서 메뉴 현황을 체크해보세요!</div> */}
       <ReactApexChart
         options={options}
         series={series}

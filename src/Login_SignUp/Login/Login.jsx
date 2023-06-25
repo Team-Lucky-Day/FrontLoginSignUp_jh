@@ -7,12 +7,12 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 
 const Login = (props) => {
-  const inputPlaceholder = ["Id", " Password"];
+  const inputPlaceholder = ["Id", "Password"];
   const [inputs, setInputs] = useState(Array(2).fill(""));
   const navigate = useNavigate();
 
   const handleInputChange = (index, value) => {
-    const newInputs = [...inputPlaceholder];
+    const newInputs = [...inputs];
     newInputs[index] = value;
     setInputs(newInputs);
   };
@@ -28,36 +28,28 @@ const Login = (props) => {
       baseURL: "http://localhost:3000/Login",
     })
       .then(function (response) {
-        if (response.status === 200) {
-          // 성공적인 응답 (200 OK)
-          console.log(axios.data);
-          Swal.fire({
-            icon: "success",
-            title: "",
-            customClass: {
-              confirmButton: "btn-color",
-            },
-          });
-          console.log("요청이 성공했습니다!");
-          navigate("/");
-        } else if (response.status === 400) {
-          // 기타 상태 코드 처리
-          if (response && response.status === 400) {
-            Swal.fire({
-              icon: "warning",
-              title: "",
-              text: "비밀번호를 다시 확인하세요",
-              customClass: {
-                confirmButton: "btn-color",
-              },
-            });
-          } else {
-          }
-          console.log("요청이 실패했습니다. 상태 코드:", response.status);
-        }
+        // 성공적인 응답 (200 OK)
+        console.log(response.data);
+        Swal.fire({
+          icon: "success",
+          title: "",
+          customClass: {
+            confirmButton: "btn-color",
+          },
+        });
+        console.log("요청이 성공했습니다!");
+        navigate("/");
       })
-      .catch(function (error) {
-        console.log(error);
+      .catch(function (response) {
+        Swal.fire({
+          icon: "warning",
+          title: "",
+          text: "비밀번호를 다시 확인하세요",
+          customClass: {
+            confirmButton: "btn-color",
+          },
+        });
+        console.log("요청이 실패했습니다. 상태 코드:", response.status);
       });
   };
 
@@ -65,19 +57,22 @@ const Login = (props) => {
     <div className="container__form container--signin">
       <div className="form" id="form2">
         <h2 className="form__title">ㅤㅤㅤㅤㅤ</h2>
-
-        <input
-          type="text"
-          placeholder={inputPlaceholder[0]}
-          className="input"
-          onChange={(e) => handleInputChange(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder={inputPlaceholder[1]}
-          className="input"
-          onChange={(e) => handleInputChange(e.target.value)}
-        />
+        <React.Fragment>
+          <input
+            type="text"
+            placeholder={inputPlaceholder[0]}
+            className="input"
+            value={inputs[0]}
+            onChange={(e) => handleInputChange(0, e.target.value)}
+          />
+          <input
+            type="password"
+            placeholder={inputPlaceholder[1]}
+            className="input"
+            value={inputs[1]}
+            onChange={(e) => handleInputChange(1, e.target.value)}
+          />
+        </React.Fragment>
         <ForgotYourPw />
         <button className="btn" onClick={handleButtonClick}>
           Login

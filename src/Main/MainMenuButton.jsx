@@ -2,11 +2,11 @@ import React from "react";
 import MainMenu from "./MainMenu";
 const MainMenuButton = () => {
   const linkProps = {
-    about: {
+    login: {
       href: "/Login",
       text: "Login",
     },
-    login: {
+    menu: {
       href: "/Menu",
       text: "Menu",
     },
@@ -44,8 +44,8 @@ const MainMenuButton = () => {
         </div>
         <div className="main-menu-background"></div>
         <div className="main-menuGroup">
-          <MainMenu href={linkProps.about.href} text={linkProps.about.text} />
           <MainMenu href={linkProps.login.href} text={linkProps.login.text} />
+          <MainMenu href={linkProps.menu.href} text={linkProps.menu.text} />
           <MainMenu
             href={linkProps.favorites.href}
             text={linkProps.favorites.text}
