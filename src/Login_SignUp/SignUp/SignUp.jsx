@@ -39,14 +39,42 @@ const SignUp = (props) => {
   };
   const navigate = useNavigate();
   const idoverlapCheck = (e) => {
-    Swal.fire({
-      icon: "error",
-      title: "",
-      text: "이미 존재하는 아이디입니다.",
-      customClass: {
-        confirmButton: "btn-color",
+    axios({
+      url: "http://localhost:8080/user/IDcheck",
+      method: "post",
+      data: {
+        u_name: inputs[0],
+        u_id: inputs[1],
+        u_email: inputs[2],
+        u_pw: inputs[2],
+        u_phone: inputs[3],
       },
-    });
+      baseURL: "http://localhost:3000/Login",
+    })
+      .then(function (response) {
+        console.log(axios.data);
+        Swal.fire({
+          icon: "success",
+          title: "",
+          text: "사용가능 한 아이디입니다.",
+          customClass: {
+            confirmButton: "btn-color",
+          },
+        });
+        console.log("요청이 성공했습니다!");
+        navigate("/Login");
+      })
+      .catch(function (response) {
+        Swal.fire({
+          icon: "warning",
+          title: "",
+          text: "이미 존재하는 아이디입니다.",
+          customClass: {
+            confirmButton: "btn-color",
+          },
+        });
+        console.log("요청이 실패했습니다. 상태 코드:", response.status);
+      });
   };
   const handleButtonClick = () => {
     const passwordCheck = (e) => {

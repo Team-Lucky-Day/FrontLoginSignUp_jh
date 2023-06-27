@@ -13,7 +13,6 @@ const Main = () => {
     });
   }, []);
 
-  const text = "Login";
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
 
   useEffect(() => {

@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MainMenu from "./MainMenu";
 const MainMenuButton = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  useEffect(() => {
+    // Check login status from localStorage
+    const isLoggedInStorage = localStorage.getItem("isLoggedIn");
+    if (isLoggedInStorage && isLoggedInStorage === "true") {
+      setIsLoggedIn(true);
+    }
+  }, []);
   const linkProps = {
     login: {
       href: "/Login",
       text: "Login",
+    },
+    logout: {
+      href: "/Login",
+      text: "Logout",
     },
     menu: {
       href: "/Menu",
@@ -26,6 +38,7 @@ const MainMenuButton = () => {
   const toggleMenu = () => {
     document.body.classList.toggle("open");
   };
+
   return (
     <>
       <div className="main-menu-container">
@@ -44,13 +57,31 @@ const MainMenuButton = () => {
         </div>
         <div className="main-menu-background"></div>
         <div className="main-menuGroup">
-          <MainMenu href={linkProps.login.href} text={linkProps.login.text} />
-          <MainMenu href={linkProps.menu.href} text={linkProps.menu.text} />
-          <MainMenu
-            href={linkProps.favorites.href}
-            text={linkProps.favorites.text}
-          />
-          <MainMenu href={linkProps.mypage.href} text={linkProps.mypage.text} />
+          {isLoggedIn ? (
+            <>
+              <MainMenu
+                href={linkProps.logout.href}
+                text={linkProps.logout.text}
+              />
+              <MainMenu href={linkProps.menu.href} text={linkProps.menu.text} />
+              <MainMenu
+                href={linkProps.favorites.href}
+                text={linkProps.favorites.text}
+              />
+              <MainMenu
+                href={linkProps.mypage.href}
+                text={linkProps.mypage.text}
+              />
+            </>
+          ) : (
+            <>
+              <MainMenu
+                href={linkProps.login.href}
+                text={linkProps.login.text}
+              />
+              <MainMenu href={linkProps.menu.href} text={linkProps.menu.text} />
+            </>
+          )}
         </div>
       </div>
     </>
