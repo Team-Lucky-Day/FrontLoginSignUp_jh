@@ -1,23 +1,11 @@
 .payment-Component {
+  height: 200px;
+}
+.payment-Body {
   width: 500px;
   margin: 10% auto;
   border-radius: 1rem;
-  overflow-y: scroll;
-  height: 350px;
-  padding: 0 1rem;
-}
-.payment-Component::-webkit-scrollbar {
-  width: 10px; /* 스크롤바의 너비 */
-  padding: 1rem;
-}
-
-.payment-Component::-webkit-scrollbar-thumb {
-  background: #8f8479; /* 스크롤바의 색상 */
-  border-radius: 10px;
-}
-
-.payment-Component::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1); /*스크롤바 뒷 배경 색상*/
+  padding: 2rem;
 }
 .payment-Title {
   text-align: center;
@@ -26,6 +14,7 @@
   font-family: "GmarketSansMedium";
   letter-spacing: 1rem;
   padding: 1rem 0;
+  margin: 2rem 0;
 }
 
 .payment-Body {
@@ -33,10 +22,31 @@
   margin-top: 2rem;
   font-size: 1.1rem;
   font-family: "GmarketSansMedium";
+  background-color: #c5b9ad;
+  border-radius: 2rem 2rem 0 0;
+  overflow-y: scroll;
+  height: 302px;
+  overflow: auto;
+  padding: 2rem;
+}
+.payment-Body::-webkit-scrollbar {
+  width: 10px; /* 스크롤바의 너비 */
+  padding: 1rem;
+}
+
+.payment-Body::-webkit-scrollbar-thumb {
+  background: #8f8479; /* 스크롤바의 색상 */
+  border-radius: 10px;
+  padding-top: 2rem;
+}
+
+.payment-Body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /*스크롤바 뒷 배경 색상*/
+  margin-top: 2rem;
 }
 .payment-main-Title {
   font-weight: bold;
-  color: gray;
+  color: rgb(255, 255, 255);
   display: inline;
   font-size: 1.2rem;
   font-family: "GmarketSansMedium";

@@ -65,6 +65,7 @@ const PaymentComponent = () => {
             {paymentMethod === "easyCard" && <button>카드 정보 입력</button>}
           </div>
         </div>
+        <button className="paymentComponent-button">결제하기</button>
       </div>
     </>
   );

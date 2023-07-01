@@ -3,9 +3,8 @@ import PaymentComponent from "./PaymentComponent";
 import "../CSS/payment.css";
 const Payment = () => {
   return (
-    <div className="payment-Component">
+    <div className="payment-Component" style={{ height: "200px" }}>
       <PaymentComponent />
-      <button className="paymentComponent-button">결제하기</button>
     </div>
   );
 };
