@@ -1,22 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MainMenu from "./MainMenu";
 const MainMenuButton = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  useEffect(() => {
-    // Check login status from localStorage
-    const isLoggedInStorage = localStorage.getItem("isLoggedIn");
-    if (isLoggedInStorage && isLoggedInStorage === "true") {
-      setIsLoggedIn(true);
-    }
-  }, []);
   const linkProps = {
     login: {
       href: "/Login",
       text: "Login",
-    },
-    logout: {
-      href: "/Login",
-      text: "Logout",
     },
     menu: {
       href: "/Menu",
@@ -25,6 +14,10 @@ const MainMenuButton = () => {
     signup: {
       href: "/Seat",
       text: "Seat",
+    },
+    payment: {
+      href: "/Payment",
+      text: "Payment",
     },
     favorites: {
       href: "/FavoritesMenu",
@@ -37,6 +30,13 @@ const MainMenuButton = () => {
   };
   const toggleMenu = () => {
     document.body.classList.toggle("open");
+  };
+  const navigate = useNavigate();
+  var getValue = localStorage.getItem("authorization");
+  console.log(getValue);
+  const handleLogout = () => {
+    localStorage.removeItem("authorization");
+    navigate("/");
   };
 
   return (
@@ -57,16 +57,21 @@ const MainMenuButton = () => {
         </div>
         <div className="main-menu-background"></div>
         <div className="main-menuGroup">
-          {isLoggedIn ? (
+          {getValue !== null ? (
             <>
-              <MainMenu
-                href={linkProps.logout.href}
-                text={linkProps.logout.text}
-              />
+              <nav>
+                <a href="/" className="main-menulink" onClick={handleLogout}>
+                  Logout
+                </a>
+              </nav>
               <MainMenu href={linkProps.menu.href} text={linkProps.menu.text} />
               <MainMenu
                 href={linkProps.favorites.href}
                 text={linkProps.favorites.text}
+              />
+              <MainMenu
+                href={linkProps.payment.href}
+                text={linkProps.payment.text}
               />
               <MainMenu
                 href={linkProps.mypage.href}

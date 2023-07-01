@@ -1,0 +1,51 @@
+.payment-Component {
+  width: 500px;
+  margin: 10% auto;
+  border: 2px solid rgb(183, 183, 183);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+.payment-Title {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: "GmarketSansMedium";
+  letter-spacing: 1rem;
+}
+
+.payment-Body {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-family: "GmarketSansMedium";
+}
+.payment-main-Title {
+  font-weight: bold;
+  color: gray;
+  display: inline;
+  font-size: 1.2rem;
+  font-family: "GmarketSansMedium";
+}
+.payment-Body-p {
+  display: inline-block;
+  margin: 0.5rem;
+  font-size: 0.8rem;
+  font-family: "GmarketSansMedium";
+}
+.payment-OrderHistory {
+  display: flex;
+  font-size: 1rem;
+  padding: 1rem;
+}
+.payment-Table {
+  width: 100%;
+}
+.payment-Table tr:not(:last-child) td {
+  padding: 3rem 0;
+}
+.payment-Table tr td:first-child {
+  font-weight: bold;
+}
+.payment-Table .payment-Table-lastChild td {
+  padding: 1rem 0;
+  border-top: 2px dashed #84848489;
+}

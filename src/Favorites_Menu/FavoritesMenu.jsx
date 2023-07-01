@@ -116,6 +116,7 @@ const FavoriteMenu = ({ user }) => {
       },
     },
   };
+  
   return (
     <>
       <Header />
