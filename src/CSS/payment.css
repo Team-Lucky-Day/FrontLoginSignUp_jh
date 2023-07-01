@@ -1,9 +1,23 @@
 .payment-Component {
   width: 500px;
   margin: 10% auto;
-  border: 2px solid rgb(183, 183, 183);
   border-radius: 1rem;
-  padding: 2rem;
+  overflow-y: scroll;
+  height: 350px;
+  padding: 0 1rem;
+}
+.payment-Component::-webkit-scrollbar {
+  width: 10px; /* 스크롤바의 너비 */
+  padding: 1rem;
+}
+
+.payment-Component::-webkit-scrollbar-thumb {
+  background: #8f8479; /* 스크롤바의 색상 */
+  border-radius: 10px;
+}
+
+.payment-Component::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /*스크롤바 뒷 배경 색상*/
 }
 .payment-Title {
   text-align: center;
@@ -11,9 +25,11 @@
   font-weight: bold;
   font-family: "GmarketSansMedium";
   letter-spacing: 1rem;
+  padding: 1rem 0;
 }
 
 .payment-Body {
+  padding: 1rem;
   margin-top: 2rem;
   font-size: 1.1rem;
   font-family: "GmarketSansMedium";
@@ -48,4 +64,28 @@
 .payment-Table .payment-Table-lastChild td {
   padding: 1rem 0;
   border-top: 2px dashed #84848489;
+}
+.payment-Method {
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+.payment-Method label {
+  margin: 1rem 0.5rem;
+}
+.paymentComponent-button {
+  margin-top: 2rem;
+  width: 100%;
+  height: 2.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  border: 0px;
+  border-radius: 10px;
+  font-family: "GmarketSansMedium";
+}
+.paymentComponent-button:hover {
+  color: #3c3c3c;
+  background: #8f8479;
+  font-weight: bold;
+  cursor: pointer;
 }

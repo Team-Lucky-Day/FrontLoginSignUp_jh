@@ -5,9 +5,8 @@ const Payment = () => {
   return (
     <div className="payment-Component">
       <PaymentComponent />
-      <button>결제하기</button>
+      <button className="paymentComponent-button">결제하기</button>
     </div>
   );
 };
-
 export default Payment;

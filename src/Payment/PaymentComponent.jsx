@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PaymentTitle from "./PaymentTitle.";
 const PaymentComponent = () => {
   const Title = {
@@ -10,6 +10,11 @@ const PaymentComponent = () => {
       paymentTitle: "결제 수단",
       paymentTitleInfo: "결제 방식을 선택해주세요.",
     },
+  };
+  const [paymentMethod, setPaymentMethod] = useState("card");
+
+  const handlePaymentMethodChange = (event) => {
+    setPaymentMethod(event.target.value);
   };
   return (
     <>
@@ -36,11 +41,29 @@ const PaymentComponent = () => {
         <hr />
         <div>
           <PaymentTitle {...Title.title2} />
-          <input type="radio" value="card" name="신용카드" defaultChecked />
-          신용카드
-          <input type="radio" value="card" name="간편카드 결제" />
-          간편카드 결제
-          <button>카드 정보 입력</button>
+          <div className="payment-Method">
+            <label>
+              <input
+                type="radio"
+                value="card"
+                name="paymentMethod"
+                checked={paymentMethod === "card"}
+                onChange={handlePaymentMethodChange}
+              />
+              신용카드
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="easyCard"
+                name="paymentMethod"
+                checked={paymentMethod === "easyCard"}
+                onChange={handlePaymentMethodChange}
+              />
+              간편카드 결제
+            </label>
+            {paymentMethod === "easyCard" && <button>카드 정보 입력</button>}
+          </div>
         </div>
       </div>
     </>
