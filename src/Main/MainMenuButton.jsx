@@ -33,7 +33,6 @@ const MainMenuButton = () => {
   };
   const navigate = useNavigate();
   var getValue = localStorage.getItem("authorization");
-  console.log(getValue);
   const handleLogout = () => {
     localStorage.removeItem("authorization");
     navigate("/");
