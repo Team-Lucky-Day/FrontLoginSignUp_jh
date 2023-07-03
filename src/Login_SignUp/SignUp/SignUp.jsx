@@ -95,8 +95,8 @@ const SignUp = (props) => {
       data: {
         u_name: inputs[0],
         u_id: inputs[1],
-        u_email: inputs[3],
-        u_pw: inputs[4],
+        u_email: inputs[2],
+        u_pw: inputs[3],
         u_phone: inputs[5],
       },
       baseURL: "http://localhost:3000/Login",
