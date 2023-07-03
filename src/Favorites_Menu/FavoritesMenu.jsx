@@ -11,6 +11,7 @@ import FavoritesComponent from "./FavoritesComponent";
 import FavoritesCategory from "./FavoritesCategory";
 import "../CSS/favorites.css";
 const FavoriteMenu = () => {
+  const [name, setName] = useState("");
   useEffect(() => {
     const data = localStorage.getItem("authorization");
     console.log(data);
@@ -18,11 +19,13 @@ const FavoriteMenu = () => {
       url: "http://localhost:8080/user/getName",
       method: "post",
       baseURL: "http://localhost:3000/FavoritesMenu",
-      header: { Authorization: data },
+      headers: { Authorization: data },
     })
       .then(function (response) {
         // 성공적인 응답 (200 OK)
         console.log("요청이 성공했습니다!");
+        console.log(response.data);
+        setName(response.data);
       })
       .catch(function (response) {
         console.log("요청이 실패했습니다. 상태 코드:", response.status);
@@ -143,7 +146,7 @@ const FavoriteMenu = () => {
         <div className="favorites-page-explanation-hr"></div>
       </div>
       <div className="favorites-page-explanation-detail">
-        님이 좋아하는 LD카페 메뉴를 모아놨어요!
+        {name}님이 좋아하는 LD카페 메뉴를 모아놨어요!
         <br />
         여기서도 주문해보세요
       </div>
